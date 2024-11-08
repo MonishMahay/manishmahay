@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="manish.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        p {
+            color:blue;
+            font-size:18px;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            transition:transform 0.3s;
+            display: block;
+            margin: 20px auto;
+
+        }
+        img:hover {
+            transform:scale(1.1);
+        }
+        ol {
+            list-style-type: scale(1.1);
+        }
+        ol li {
+            color:red;
+            margin-bottom: 10px;
+
+        }
+        form {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            color: blueviolet;
+            background-color: aqua;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2a3f86;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Simple Webpage</h1>
+    </header>
+
+    <main>
+        <p>This is a simple webpage with a header, paragraph, and footer.</p>
+        <img src="https://th.bing.com/th/id/OIP.Si5TRV0S7WARxS4A1ozNuwHaFV?w=259&h=187&c=7&r=0&o=5&pid=1.7"alt="sample image">
+        <button onclick="showAlert()">Click Me</button>
+        <button onclick="changeColor()">change background button</button>
+        <ol>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+            <li>five</li>
+
+        </ol>
+
+        <form onsubmit="handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    </main>
+
+    <footer>
+        <p>Made by-[Manish Mahay]</p>
+    </footer>
+    <script>
+        function showAlert() {
+            alert("Hello World");
+        }
+        function changeColor() {
+            document.body.style.backgroundColor ='#'+Math.floor(Math.random()*16777215).tostring(16);
+        
+        }
+
+       
+        function handleSubmit(event) {
+            event.preventDefault(); 
+
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+
+            alert('Name: ${name}\nAge: ${age}');
+        }
+    </script>
+</body>
+</html>
